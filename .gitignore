@@ -1,0 +1,19 @@
+# Python and editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.vscode/
+
+# Local challenge datasets and generated split files (many exceed GitHub's 100 MB limit)
+student_resource/dataset/
+business_entity_resolution/splits/
+
+# Generated predictions, candidate tables, and scratch artifacts
+business_entity_resolution/output/
+business_entity_resolution/scratch_pairs.txt
+
+# macOS archive metadata
+__MACOSX/
+.DS_Store

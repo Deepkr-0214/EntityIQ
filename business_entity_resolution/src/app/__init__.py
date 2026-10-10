@@ -1,0 +1,3 @@
+"""
+EntityIQ Web Application Package.
+"""

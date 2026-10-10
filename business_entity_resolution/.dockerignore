@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.vscode
+.git
+.gitignore
+output/*.tsv
+splits/
+venv/
+.env

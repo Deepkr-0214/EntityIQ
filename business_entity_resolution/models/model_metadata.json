@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-10-09 18:36:39",
+  "sample_size": 3000,
+  "features": [
+    "name_jaccard",
+    "name_levenshtein",
+    "name_token_sort",
+    "name_token_set",
+    "name_partial",
+    "name_wratio",
+    "name_monge_elkan",
+    "name_acronym",
+    "name_exact",
+    "name_exact_agg",
+    "name_light_levenshtein",
+    "name_light_token_sort",
+    "addr_jaccard",
+    "addr_levenshtein",
+    "addr_token_sort",
+    "addr_token_set",
+    "addr_partial",
+    "addr_numeric_match",
+    "addr_numeric_frac",
+    "addr_numeric_longest",
+    "country_match",
+    "name_length_diff",
+    "name_length_ratio",
+    "addr_length_diff",
+    "addr_length_ratio",
+    "name_token_count_diff",
+    "addr_token_count_diff"
+  ],
+  "blocking_recall": 0.9449866054343666,
+  "avg_candidates_per_entity": 92.314,
+  "results": {
+    "logistic_regression": {
+      "best_threshold": 0.8499999999999999,
+      "macro_f05": 0.870960695261238,
+      "precision": 0.9714574314574314,
+      "recall": 0.8128544973544973,
+      "singleton_f05": 1.0
+    },
+    "lightgbm_simple": {
+      "best_threshold": 0.7,
+      "macro_f05": 0.8782428461170021,
+      "precision": 0.9925833333333335,
+      "recall": 0.8112275132275132,
+      "singleton_f05": 0.9736842105263158
+    },
+    "lightgbm_rank_aware": {
+      "best_tau1": 0.25,
+      "best_gap": 0.05,
+      "macro_f05": 0.8797697129165017,
+      "precision": 0.9934722222222221,
+      "recall": 0.8066719576719575,
+      "singleton_f05": 0.9736842105263158
+    }
+  }
+}

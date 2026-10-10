@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  entityiq-dashboard:
+    build: .
+    container_name: entityiq-dashboard
+    ports:
+      - "8501:8501"
+    command: streamlit run src/app/streamlit_app.py --server.port=8501 --server.address=0.0.0.0
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  entityiq-api:
+    build: .
+    container_name: entityiq-api
+    ports:
+      - "8000:8000"
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
